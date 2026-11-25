@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bodyverse — a living library of body, plants & Earth</title>
+  <meta name="description" content="Bodyverse is an explorable living world for learning anatomy, physiology, herbalism, botany, gardening, ecology and evidence-based wellness.">
+  <meta name="theme-color" content="#0b1a13">
+  <meta property="og:title" content="Bodyverse">
+  <meta property="og:description" content="Step into a living library of the body, the plants and the Earth.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌿%3C/text%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bodyverse.css">
+</head>
+<body>
+  <canvas id="ambient" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="logo" href="#/" aria-label="Bodyverse home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2e5e3a"/><stop offset="1" stop-color="#9be7a8"/></linearGradient></defs>
+        <path d="M32 60 C 30 44, 31 30, 32 18" stroke="#d8b45a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M32 40 C 14 40, 8 26, 10 12 C 24 12, 34 22, 32 40Z" fill="url(#lg)"/><path d="M32 32 C 48 32, 56 20, 54 6 C 40 6, 30 16, 32 32Z" fill="url(#lg)"/>
+        <circle cx="32" cy="16" r="4" fill="#d8b45a"/></svg>
+      <span>Body<em>verse</em></span>
+    </a>
+    <nav id="nav" aria-label="Main">
+      <a href="#/">🗺️ World</a><a href="#/oracle">🌳 Oracle</a><a href="#/atlas">🫀 Atlas</a><a href="#/codex">🌿 Codex</a><a href="#/apothecary">🧪 Apothecary</a>
+      <a href="#/web">🕸️ Web</a><a href="#/garden">🌱 Garden</a><a href="#/forager">🍄 Forage</a><a href="#/earth">🌎 Earth</a><a href="#/observatory">🔭 Sky</a><a href="#/journal">📔 Journal</a>
+    </nav>
+    <div id="hud"></div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <footer class="site-foot">
+    <p>🌿 <strong>Bodyverse</strong> is an educational library. It separates traditional knowledge from scientific evidence and is never a substitute for a qualified healthcare professional.</p>
+    <p>Photos & summaries: Wikipedia / Wikimedia Commons (CC BY-SA) · Weather & air: Open-Meteo · Observations: iNaturalist · Occurrences: GBIF · Maps: © OpenStreetMap contributors · Structures: PubChem</p>
+    <p><a href="links/">🔗 Bodyverse links</a></p>
+  </footer>
+
+  <div id="toasts" aria-live="polite"></div>
+  <div id="modal" class="modal"></div>
+
+  <script src="assets/js/data-herbs.js"></script>
+  <script src="assets/js/data-body.js"></script>
+  <script src="assets/js/data-world.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/views-world.js"></script>
+  <script src="assets/js/views-library.js"></script>
+  <script src="assets/js/views-nature.js"></script>
+  <script>BV.boot();</script>
+</body>
+</html>
